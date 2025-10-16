@@ -7,6 +7,14 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: java_setup.yaml
+    
+- name: install mysql python libraries
+  ansible.builtin.pip:
+    executable: pip3.9
+    name: "{{ item }}"
+  loop:
+  - PyMySQL
+  - cryptography
 
 - name: import shipping data into mysql
   community.mysql.mysql_db:

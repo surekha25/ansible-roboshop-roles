@@ -3,6 +3,6 @@
   become: yes
   tasks:
   - name: Install nginx into dynamic inventory frontend servers
-    anisble.builtin.dnf:
+    ansible.builtin.dnf:
       name: nginx
       state: present

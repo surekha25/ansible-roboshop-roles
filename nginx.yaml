@@ -2,7 +2,7 @@
   hosts: dynamic_frontend
   become: yes
   tasks:
-  - name: Install nginx into dynamic inventory 'frontend servers'
-    anisble.builtin.dnf:
+  - name: Install nginx into dynamic inventory frontend servers
+    anisble.builtin.package:
       name: nginx
       state: present
